@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>一键滚动长截图</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <header class="head">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="6.2" y="2.8" width="11.6" height="18.4" rx="2.4" stroke="currentColor" stroke-width="1.7" />
+            <path d="M9.4 7.2h5.2M9.4 10.4h5.2M9.4 13.6h3.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+            <path d="M9.6 17.2h4.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="1.6 2.2" />
+          </svg>
+        </div>
+        <div class="titles">
+          <h1>滚动长截图</h1>
+          <p>自动滚动 · 整页拼接</p>
+        </div>
+      </header>
+
+      <button id="capture" class="capture-btn" type="button">
+        <span class="spinner" aria-hidden="true"></span>
+        <span class="btn-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M4.8 8.4A2.4 2.4 0 0 1 7.2 6h1.3l1-1.7c.22-.37.62-.6 1.05-.6h4.9c.43 0 .83.23 1.05.6l1 1.7h1.3a2.4 2.4 0 0 1 2.4 2.4v8.2a2.4 2.4 0 0 1-2.4 2.4H7.2a2.4 2.4 0 0 1-2.4-2.4V8.4Z"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linejoin="round"
+            />
+            <circle cx="12" cy="12.6" r="3.2" stroke="currentColor" stroke-width="1.7" />
+          </svg>
+        </span>
+        <span class="btn-label">截屏</span>
+      </button>
+
+      <section id="status" class="status" hidden>
+        <div class="status-row">
+          <span id="statusText" class="status-text">正在准备…</span>
+          <span id="statusPercent" class="status-percent"></span>
+        </div>
+        <div class="progress">
+          <span id="progressBar" class="progress-bar"></span>
+        </div>
+      </section>
+
+      <p class="hint">截取当前网页的完整长图，自动保存到下载目录</p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,218 @@
+[
+  {
+    "case": "index",
+    "kind": "blocks",
+    "url": "http://127.0.0.1:33036/index.html",
+    "metrics": {
+      "dpr": 1,
+      "innerWidth": 1254,
+      "innerHeight": 807,
+      "scrollHeight": 7600,
+      "readyState": "complete",
+      "fixedHeader": true,
+      "bands": 0
+    },
+    "status": {
+      "filename": "长截图_127.0.0.1_20261027-192624.png",
+      "width": 1254,
+      "height": 7600,
+      "bytes": 320871,
+      "frames": 10,
+      "fallback": false,
+      "truncated": false
+    },
+    "download": {
+      "id": 1,
+      "state": "complete",
+      "filename": "D:\\ai_obj\\网页滚动长截图插件\\.tmp\\e2e-downloads\\长截图_127.0.0.1_20261027-192624.png",
+      "bytes": 320871,
+      "byExtension": "npmoegnbiohlpmigpieiiidfbooggddp"
+    },
+    "png": {
+      "width": 1254,
+      "height": 7600,
+      "bytes": 320871
+    },
+    "file": "D:\\ai_obj\\网页滚动长截图插件\\test\\out\\01-index.png"
+  },
+  {
+    "case": "grow",
+    "kind": "grow",
+    "url": "http://127.0.0.1:33036/grow.html",
+    "metrics": {
+      "dpr": 1,
+      "innerWidth": 1254,
+      "innerHeight": 807,
+      "scrollHeight": 1800,
+      "readyState": "complete",
+      "fixedHeader": false,
+      "bands": 3
+    },
+    "status": {
+      "filename": "长截图_127.0.0.1_20261027-192635.png",
+      "width": 1254,
+      "height": 6000,
+      "bytes": 212606,
+      "frames": 9,
+      "fallback": false,
+      "truncated": false
+    },
+    "download": {
+      "id": 2,
+      "state": "complete",
+      "filename": "D:\\ai_obj\\网页滚动长截图插件\\.tmp\\e2e-downloads\\长截图_127.0.0.1_20261027-192635.png",
+      "bytes": 212606,
+      "byExtension": "npmoegnbiohlpmigpieiiidfbooggddp"
+    },
+    "png": {
+      "width": 1254,
+      "height": 6000,
+      "bytes": 212606
+    },
+    "file": "D:\\ai_obj\\网页滚动长截图插件\\test\\out\\02-grow.png"
+  },
+  {
+    "case": "short",
+    "kind": "short",
+    "url": "http://127.0.0.1:33036/short.html",
+    "metrics": {
+      "dpr": 1,
+      "innerWidth": 1254,
+      "innerHeight": 807,
+      "scrollHeight": 807,
+      "readyState": "complete",
+      "fixedHeader": false,
+      "bands": 0
+    },
+    "status": {
+      "filename": "长截图_127.0.0.1_20261027-192638.png",
+      "width": 1254,
+      "height": 807,
+      "bytes": 30069,
+      "frames": 1,
+      "fallback": false,
+      "truncated": false
+    },
+    "download": {
+      "id": 3,
+      "state": "complete",
+      "filename": "D:\\ai_obj\\网页滚动长截图插件\\.tmp\\e2e-downloads\\长截图_127.0.0.1_20261027-192638.png",
+      "bytes": 30069,
+      "byExtension": "npmoegnbiohlpmigpieiiidfbooggddp"
+    },
+    "png": {
+      "width": 1254,
+      "height": 807,
+      "bytes": 30069
+    },
+    "file": "D:\\ai_obj\\网页滚动长截图插件\\test\\out\\03-short.png"
+  },
+  {
+    "case": "sandbox",
+    "kind": "csp",
+    "url": "http://127.0.0.1:33036/sandbox.html",
+    "metrics": {
+      "dpr": 1,
+      "innerWidth": 1254,
+      "innerHeight": 807,
+      "scrollHeight": 807,
+      "readyState": "complete",
+      "fixedHeader": false,
+      "bands": 0
+    },
+    "status": {
+      "filename": "长截图_127.0.0.1_20261027-192642.png",
+      "width": 1254,
+      "height": 807,
+      "bytes": 34102,
+      "frames": 1,
+      "fallback": false,
+      "truncated": false
+    },
+    "download": {
+      "id": 4,
+      "state": "complete",
+      "filename": "D:\\ai_obj\\网页滚动长截图插件\\.tmp\\e2e-downloads\\长截图_127.0.0.1_20261027-192642.png",
+      "bytes": 34102,
+      "byExtension": "npmoegnbiohlpmigpieiiidfbooggddp"
+    },
+    "png": {
+      "width": 1254,
+      "height": 807,
+      "bytes": 34102
+    },
+    "file": "D:\\ai_obj\\网页滚动长截图插件\\test\\out\\04-sandbox.png"
+  },
+  {
+    "case": "transient",
+    "kind": "transient",
+    "url": "http://127.0.0.1:33036/transient.html",
+    "metrics": {
+      "dpr": 1,
+      "innerWidth": 1254,
+      "innerHeight": 807,
+      "scrollHeight": 4407,
+      "readyState": "complete",
+      "fixedHeader": false,
+      "bands": 6
+    },
+    "status": {
+      "filename": "长截图_127.0.0.1_20261027-192650.png",
+      "width": 1254,
+      "height": 4407,
+      "bytes": 148560,
+      "frames": 6,
+      "fallback": false,
+      "truncated": false
+    },
+    "download": {
+      "id": 5,
+      "state": "complete",
+      "filename": "D:\\ai_obj\\网页滚动长截图插件\\.tmp\\e2e-downloads\\长截图_127.0.0.1_20261027-192650.png",
+      "bytes": 148560,
+      "byExtension": "npmoegnbiohlpmigpieiiidfbooggddp"
+    },
+    "png": {
+      "width": 1254,
+      "height": 4407,
+      "bytes": 148560
+    },
+    "file": "D:\\ai_obj\\网页滚动长截图插件\\test\\out\\05-transient.png"
+  },
+  {
+    "case": "fallback",
+    "kind": "fallback",
+    "url": "http://127.0.0.1:33036/fallback.html",
+    "metrics": {
+      "dpr": 1,
+      "innerWidth": 1254,
+      "innerHeight": 807,
+      "scrollHeight": 2807,
+      "readyState": "complete",
+      "fixedHeader": false,
+      "bands": 0
+    },
+    "status": {
+      "filename": "屏幕截图_127.0.0.1_20261027-192709.png",
+      "width": 1254,
+      "height": 807,
+      "bytes": 34417,
+      "frames": 1,
+      "fallback": true,
+      "truncated": false
+    },
+    "download": {
+      "id": 1,
+      "state": "complete",
+      "filename": "D:\\ai_obj\\网页滚动长截图插件\\.tmp\\e2e-downloads\\屏幕截图_127.0.0.1_20261027-192709.png",
+      "bytes": 34417,
+      "byExtension": "jcnomibdmbimbaemagflpjifhcdlfach"
+    },
+    "png": {
+      "width": 1254,
+      "height": 807,
+      "bytes": 34417
+    },
+    "file": "D:\\ai_obj\\网页滚动长截图插件\\test\\out\\06-fallback.png"
+  }
+]

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>长截图测试 · 滚动加载变长</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+        background: #ffffff;
+      }
+      .band {
+        height: 600px;
+        position: relative;
+      }
+      .band span {
+        position: absolute;
+        left: 96px;
+        top: 90px;
+        color: rgba(255, 255, 255, 0.9);
+        font: 800 46px/1 "Segoe UI", sans-serif;
+        letter-spacing: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="bands"></main>
+    <script>
+      const COLORS = [
+        '#be123c', '#c2410c', '#a16207', '#4d7c0f', '#15803d',
+        '#0f766e', '#0e7490', '#1d4ed8', '#6d28d9', '#a21caf',
+      ];
+      const BAND_HEIGHT = 600;
+      const MAX_BANDS = COLORS.length;
+      const main = document.getElementById('bands');
+      let added = 0;
+
+      function addBand() {
+        if (added >= MAX_BANDS) return;
+        const band = document.createElement('section');
+        band.className = 'band';
+        band.style.background = COLORS[added];
+        band.innerHTML = `<span>BAND ${String(added + 1).padStart(2, '0')}</span>`;
+        main.appendChild(band);
+        added += 1;
+      }
+
+      for (let i = 0; i < 3; i += 1) addBand();
+
+      window.addEventListener(
+        'scroll',
+        () => {
+          if (added >= MAX_BANDS) return;
+          if (window.scrollY + window.innerHeight > document.documentElement.scrollHeight - 400) {
+            addBand();
+          }
+        },
+        { passive: true }
+      );
+    </script>
+  </body>
+</html>

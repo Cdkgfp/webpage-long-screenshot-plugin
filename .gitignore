@@ -1,0 +1,21 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# Local temp / test runs
+.tmp/
+.tmp-*/
+*.log
+
+# Node
+node_modules/
+
+# Build artifacts（安装包通过 GitHub Releases 分发）
+dist/
+
+# Python
+__pycache__/
+*.pyc

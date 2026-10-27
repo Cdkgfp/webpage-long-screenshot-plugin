@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>长截图测试 · 首屏浮层</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+      }
+      .hero {
+        position: relative;
+        height: 100vh;
+        background: #0f172a;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero h1 {
+        font-size: 42px;
+        letter-spacing: 6px;
+        margin: 0;
+      }
+      /* 模拟小黑盒：首屏底部的评论输入框，站点在首次滚动后自己隐藏 */
+      .comment-box {
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        bottom: 24px;
+        height: 64px;
+        border-radius: 14px;
+        background: #ff00aa;
+        color: #ffffff;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        padding-left: 24px;
+        letter-spacing: 1px;
+      }
+      /* 模拟固定底栏：截图插件应该自己隐藏它 */
+      .fixed-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 40px;
+        background: #22d3ee;
+        color: #082f49;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 50;
+        letter-spacing: 1px;
+      }
+      .band {
+        height: 600px;
+        position: relative;
+      }
+      .band span {
+        position: absolute;
+        left: 96px;
+        top: 80px;
+        color: rgba(255, 255, 255, 0.9);
+        font: 800 44px/1 "Segoe UI", sans-serif;
+        letter-spacing: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <h1>首屏 Hero</h1>
+      <div class="comment-box" id="commentBox">评论输入框（首次滚动后消失）</div>
+    </header>
+    <div class="fixed-bar" id="fixedBar">固定底栏（不应出现在长图中）</div>
+    <main id="bands"></main>
+    <script>
+      const COLORS = ['#b91c1c', '#c2410c', '#a16207', '#4d7c0f', '#15803d', '#0f766e'];
+      const main = document.getElementById('bands');
+      COLORS.forEach((color, index) => {
+        const band = document.createElement('section');
+        band.className = 'band';
+        band.style.background = color;
+        band.innerHTML = `<span>BAND ${index + 1}</span>`;
+        main.appendChild(band);
+      });
+
+      // 站点自身的逻辑：第一次滚动后隐藏首屏评论框和固定底栏
+      let hidden = false;
+      window.addEventListener(
+        'scroll',
+        () => {
+          if (hidden) return;
+          hidden = true;
+          document.getElementById('commentBox').style.display = 'none';
+          document.getElementById('fixedBar').style.display = 'none';
+        },
+        { passive: true }
+      );
+    </script>
+  </body>
+</html>

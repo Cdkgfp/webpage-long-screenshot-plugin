@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>长截图测试 · 兜底截图</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #2563eb;
+        color: #ffffff;
+        font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+      }
+      .hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero h1 {
+        margin: 0;
+        font-size: 42px;
+        letter-spacing: 6px;
+      }
+      .hero p {
+        margin: 16px 0 0;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 15px;
+        letter-spacing: 1px;
+      }
+      .tall {
+        height: 2000px;
+        background: #1d4ed8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <h1>兜底截图</h1>
+      <p>扩展无法注入脚本时 · 只截取当前可视区域</p>
+    </div>
+    <div class="tall"></div>
+  </body>
+</html>

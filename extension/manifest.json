@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "一键滚动长截图",
+  "short_name": "滚动长截图",
+  "version": "1.1.0",
+  "description": "点击一个按钮，自动滚动网页并拼接成一张完整长图，保存到下载目录。",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads",
+    "offscreen"
+  ],
+  "action": {
+    "default_title": "一键滚动长截图",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

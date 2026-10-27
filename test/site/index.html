@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>长截图测试 · 固定区块</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+        background: #ffffff;
+        color: #0f172a;
+      }
+      .fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 56px;
+        background: #111827;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        padding: 0 24px;
+        z-index: 100;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+      .section {
+        height: 600px;
+        margin: 0;
+        position: relative;
+        overflow: visible;
+      }
+      .section .label {
+        position: absolute;
+        left: 96px;
+        top: 80px;
+        font-size: 48px;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.92);
+        letter-spacing: 4px;
+      }
+      .section .sub {
+        position: absolute;
+        left: 98px;
+        top: 150px;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.75);
+      }
+      .section .meta {
+        position: absolute;
+        right: 64px;
+        bottom: 40px;
+        font: 14px/1.4 ui-monospace, Consolas, monospace;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .section img {
+        position: absolute;
+        right: 120px;
+        top: 220px;
+        width: 240px;
+        height: 160px;
+        border-radius: 12px;
+        opacity: 0.9;
+      }
+      .sticky-note {
+        position: sticky;
+        top: 0;
+        height: 44px;
+        background: #fbbf24;
+        color: #78350f;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        padding-left: 32px;
+        z-index: 5;
+      }
+      footer {
+        height: 400px;
+        background: #1e293b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #e2e8f0;
+        font-size: 30px;
+        letter-spacing: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="fixed-header">固定顶栏（截图中不应出现）</header>
+    <main id="sections"></main>
+    <footer>页脚 · FOOTER</footer>
+    <script>
+      const COLORS = [
+        '#e11d48', '#ea580c', '#d97706', '#65a30d', '#16a34a', '#0d9488',
+        '#0891b2', '#2563eb', '#7c3aed', '#c026d3', '#db2777', '#475569',
+      ];
+      const svg = (n) =>
+        'data:image/svg+xml;charset=utf-8,' +
+        encodeURIComponent(
+          `<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160"><rect width="240" height="160" rx="12" fill="rgba(255,255,255,0.28)"/><circle cx="120" cy="80" r="42" fill="rgba(255,255,255,0.55)"/><text x="120" y="92" text-anchor="middle" font-size="34" font-family="sans-serif" fill="rgba(0,0,0,0.35)">${n}</text></svg>`
+        );
+
+      const main = document.getElementById('sections');
+      COLORS.forEach((color, index) => {
+        const section = document.createElement('section');
+        section.className = 'section';
+        section.style.background = color;
+        section.innerHTML = `
+          <div class="label">0${index + 1}</div>
+          <div class="sub">第 ${index + 1} 屏 · 600px</div>
+          <img loading="lazy" alt="" src="${svg(index + 1)}" />
+          <div class="meta">section ${index + 1} / ${COLORS.length}</div>`;
+        if (index === 2) {
+          const sticky = document.createElement('div');
+          sticky.className = 'sticky-note';
+          sticky.textContent = '吸顶条（只应出现一次）';
+          section.appendChild(sticky);
+        }
+        main.appendChild(section);
+      });
+    </script>
+  </body>
+</html>
