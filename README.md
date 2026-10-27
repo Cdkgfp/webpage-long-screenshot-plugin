@@ -1,4 +1,4 @@
-# 一键滚动长截图
+# 滚动长截图网页插件
 
 [![CI](https://github.com/Cdkgfp/webpage-long-screenshot-plugin/actions/workflows/ci.yml/badge.svg)](https://github.com/Cdkgfp/webpage-long-screenshot-plugin/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
